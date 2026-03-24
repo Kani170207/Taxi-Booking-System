@@ -10,7 +10,7 @@ if "logged_in" not in st.session_state:
 
 if not st.session_state["logged_in"]:
     st.warning("🔐 Please login first")
-    st.switch_page("pages/0_Login.py")
+    st.switch_page("0_Login.py")
 
 # ------------------ SIDEBAR ------------------
 st.sidebar.title("🚖 Taxi System")
@@ -25,7 +25,7 @@ if "role" in st.session_state:
 # 🚪 Logout button
 if st.sidebar.button("🚪 Logout"):
     st.session_state["logged_in"] = False
-    st.switch_page("pages/0_Login.py")
+    st.switch_page("0_Login.py")
 
 # ------------------ MENU ------------------
 menu = ["Add Driver", "Add Vehicle", "Book Ride", "View Data"]
